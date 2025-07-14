@@ -2,7 +2,7 @@
 
 namespace NoteTakerAPI.Models;
 
-public class Notebook
+public class Notebook : IEntityBase
 {
     public int Id { get; set; }
     public required string Name { get; set; }

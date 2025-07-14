@@ -1,6 +1,6 @@
 ﻿namespace NoteTakerAPI.Models;
 
-public class User
+public class User : IEntityBase
 {
     public int Id { get; set; }
     public required string Name { get; set; }

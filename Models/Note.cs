@@ -1,6 +1,6 @@
 ﻿namespace NoteTakerAPI.Models;
 
-public class Note
+public class Note : IEntityBase
 {
     public int Id { get; set; }
     public string? Title { get; set; }
