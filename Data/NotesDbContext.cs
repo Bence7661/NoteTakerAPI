@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NoteTakerAPI.Data.Seeders;
 using NoteTakerAPI.Models;
 using System.Reflection;
 
@@ -10,6 +11,9 @@ public class NotesDbContext(DbContextOptions<NotesDbContext> options) : DbContex
     public DbSet<Notebook> Notebook { get; set; }
     public DbSet<Note> Note { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder) 
-        => modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        UserSeeder.Seed(modelBuilder);
+    }
 }
