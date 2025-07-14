@@ -19,7 +19,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .IsRequired();
 
         builder.HasMany(u => u.Notebooks)
-            .WithOne()
+            .WithOne(n => n.User)
             .HasForeignKey(nameof(Notebook.UserId))
             .OnDelete(DeleteBehavior.Cascade);
     }
