@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using NoteTakerAPI.Models;
 
-namespace NoteTakerAPI.EntityTypeConfigurations;
+namespace NoteTakerAPI.Data.EntityTypeConfigurations;
 
 public class UserConfiguration : IEntityTypeConfiguration<User>
 {
