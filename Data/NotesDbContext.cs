@@ -15,5 +15,7 @@ public class NotesDbContext(DbContextOptions<NotesDbContext> options) : DbContex
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         UserSeeder.Seed(modelBuilder);
+        NotebookSeeder.Seed(modelBuilder);
+        NoteSeeder.Seed(modelBuilder);
     }
 }
